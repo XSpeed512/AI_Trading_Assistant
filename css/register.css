@@ -1,0 +1,49 @@
+/* Register Page Specific Styles */
+.page-wrap{
+  min-height: calc(100vh - 120px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 30px 16px;
+}
+
+.form-card{
+  width: 100%;
+  max-width: 520px;
+}
+
+.form-title{
+  text-align:center;
+  font-size:1.6rem;
+  margin-bottom:6px;
+}
+
+.form-subtitle{
+  text-align:center;
+  color:#cbd5e1;
+  margin-bottom:16px;
+}
+
+.form-2col{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:12px;
+}
+/* link secondari */
+.form-links{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:10px;
+}
+.form-links a{
+  color:#cbd5e1;
+  text-decoration:none;
+  transition: color var(--transition);
+}
+.form-links a:hover{ color:#fff }
+
+
+@media (max-width:640px){
+  .form-2col{ grid-template-columns: 1fr; }
+}
