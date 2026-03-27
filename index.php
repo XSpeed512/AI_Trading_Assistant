@@ -21,7 +21,7 @@ if ($isGuest) {
 
   <header>
       <div class="container">
-          <h1>📊 AI Trading Assistant</h1>
+          <h1> AI Trading Assistant</h1>
       </div>
       <div class="icon">
           <?php if(isset($_SESSION["username"])): ?>
@@ -67,9 +67,7 @@ if ($isGuest) {
     <script defer src="../js/chart.js" ></script>
 
  <!-- Dashboard -->
-<main id="container" class="container" style:"min-height: calc(100vh - 200px); flex:1;"  >
-      <div class="grid-stack" ></div>
-</main>
+<div id="container" class="container grid-stack"></div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -178,10 +176,10 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="grid-stack-item" gs-w="8" gs-h="4" gs-x="0" gs-y="0">
         ${widgetHtml('grafico')}
       </div>`);
-	setTimeout(()=>{
+    /*
     const chartId = document.querySelector('#marketChart');
   	if (chartId) initChart(chartId);
-    },0);
+    */
     grid.addWidget(`
       <div class="grid-stack-item" gs-w="4" gs-h="4" gs-x="8" gs-y="0">
         ${widgetHtml('chat_ai')}
@@ -296,6 +294,7 @@ document.addEventListener('DOMContentLoaded', function() {
   } else { 
     addDefaultWidgets();
   }
+
   grid.on("resizestop", function (event, el) {
   if (el._chart && el._chartArea) {
     resizeMain(el._chart, el._chartArea);
@@ -305,7 +304,5 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-
-  <?php include 'includes/footer.php'; ?>
 </body>
 </html>
